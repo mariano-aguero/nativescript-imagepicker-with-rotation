@@ -232,7 +232,7 @@ export class SelectedAsset extends imageAssetModule.ImageAsset {
         let bitmap = android.graphics.BitmapFactory.decodeStream(this.openInputStream(uri), null, downsampleOptions);
         let image = new imagesource.ImageSource();
         image.setNativeSource(bitmap);
-        image.setRotationAngleFromFile(this._calculateFileUri(uri));
+        image.setRotationAngleFromFile(SelectedAsset._calculateFileUri(uri));
         return image;
     }
 
